@@ -1,18 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
-  font-family: Arial;
-  background: #f4f4f4;
+  background: #020617;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: rgba(2, 6, 23, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #0f766e;
+}
+
+.navbar a {
+  color: #94a3b8;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #2dd4bf;
+}
+
+.logo {
+  color: #2dd4bf;
+  font-weight: 700;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px 8%;
+  background: linear-gradient(135deg, #020617, #042f2e);
+}
+
+.hero-text h1 {
+  font-size: 44px;
+}
+
+.hero-text span {
+  color: #2dd4bf;
+}
+
+.hero-text p {
+  margin: 18px 0;
+  color: #cbd5e1;
+}
+
+.hero-img img {
+  width: 260px;
+  border-radius: 16px;
+  border: 3px solid #2dd4bf;
+  box-shadow: 0 15px 40px rgba(45, 212, 191, 0.25);
+}
+
+/* BUTTON */
+.btn {
+  background: linear-gradient(135deg, #2dd4bf, #0f766e);
+  padding: 12px 26px;
+  color: #020617;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(45, 212, 191, 0.45);
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 8%;
+}
+
+.section.dark {
+  background: #020617;
+}
+
+.section h2 {
   text-align: center;
+  margin-bottom: 30px;
+  color: #2dd4bf;
+  font-size: 32px;
 }
 
-.login-box {
-  background: white;
-  padding: 20px;
-  margin: 100px auto;
-  width: 300px;
-  box-shadow: 0 0 10px gray;
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
 }
 
-button {
-  padding: 10px;
-  margin-top: 10px;
+.skills span {
+  background: #020617;
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: 1px solid #0f766e;
+  transition: 0.3s;
 }
+
+.skills span:hover {
+  background: #2dd4bf;
+  color: #020617;
+  transform: scale(1.1);
+}
+
+/* CARDS */
+.card {
+  background: #020617;
+  padding: 22px;
+  border-radius: 14px;
+  margin: 18px 0;
+  border: 1px solid #0f766e;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* CONTACT */
+.contact p {
+  text-align: center;
+  color: #cbd5e1;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 22px;
+  margin-bottom: auto;
+  background: #020617;
+  color: #2dd4bf;
+  border-top: 1px solid #0f766e;
+}
+footer a {
+  color: #2dd4bf;
+  text-decoration: none;
+  margin: 0cap;
+  font-weight: 600;
+}
+.hero-text {
+  animation: slideLeft 1.2s ease forwards;
+  opacity: 0;
+}
+
+.hero-img {
+  animation: slideRight 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(-60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.navbar a:hover {
+  color: #d42dbe;
+  text-shadow: 0 0 10px rgba(212, 45, 206, 0.8);
+}
+.btn {
+  position: relative;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  box-shadow: 0 0 0 rgba(195, 45, 212, 0.7);
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(212, 42, 207, 0.6); }
+  70% { box-shadow: 0 0 0 18px rgba(45,212,191,0); }
+  100% { box-shadow: 0 0 0 0 rgba(45,212,191,0); }
+}
+.section {
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-img img:hover {
+  box-shadow: 0 0 35px rgba(212, 45, 98, 0.8);
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+
+
